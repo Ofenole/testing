@@ -1,0 +1,92 @@
+@import "./node_modules/bootstrap/scss/bootstrap.scss";
+
+
+
+// :root {
+//   --orange:orange;
+//   --blue:blue;
+//   --a:green
+
+// }
+// h2{
+//   border-bottom: 2px solid var(--orange);
+
+// }
+// .box{
+// color: var(--blue);
+// }
+// button{
+//   --buton-color:rgb(163, 112, 17);
+//   background-color: var(--buton-color);
+//   border: 1px solid var(--buton-color);
+// }
+// // 2 . var(--namee: fallback)
+// .box{
+//   background-color: var(--a, grey);
+//   padding: 10px;
+//   margin: 10px;
+
+// }
+// .special {
+//   --a: orange;
+// }
+// SASS
+$bg-color: #0e7490;
+$myFontSize: 30px;
+$myWidth: 400px;
+$mysize: 1rem;
+$color: red;
+
+body {
+  background-color: $bg-color;
+  font-size: $myFontSize;
+  color: $color;
+}
+#container {
+  margin: $mysize * 3;
+  width: $myWidth;
+}
+//SASS/SCSS
+//3. SASS variable scope
+
+p {
+  $color: black;
+  color: $color;
+}
+
+span {
+  color: $color;
+}
+// 4. Nested Rules
+.test {
+  display: flex;
+  justify-content: space-between;
+  li {
+    list-style: none;
+    background-color: aquamarine;
+  }
+  &:hover li {
+    background-color: black;
+  }
+}
+.nested {
+  background-color: yellow;
+  p{
+    color: coral;
+    text-shadow: 2px 2px 10px#0e7490;
+  }
+}
+nav{
+  ul{
+    margin: 100px;
+    padding: 50px;
+    list-style: none;
+  }
+  li{
+    display:inline-block ;
+  }
+  a{
+    text-decoration: none;
+    color: white;
+  }
+}
